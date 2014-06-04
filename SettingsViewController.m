@@ -87,7 +87,7 @@
 //    }
 }
 
-- (void) setDefaultTip:(int) defaultTip {
+- (void) setDefaultTip:(long) defaultTip {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:defaultTip forKey:@"DEFAULT_TIP"];
@@ -97,9 +97,9 @@
 - (void) setddTextToDefault {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    int selectedDefault = [defaults integerForKey:@"DEFAULT_TIP"];
+    NSInteger selectedDefault = [defaults integerForKey:@"DEFAULT_TIP"];
     
-    NSLog(@"got default in settings as %i", selectedDefault);
+    NSLog(@"got default in settings as %ld", (long)selectedDefault);
     
     switch (selectedDefault) {
             

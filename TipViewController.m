@@ -41,9 +41,9 @@
 - (void) setDefaultTipInUI {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    int selectedDefault = [defaults integerForKey:@"DEFAULT_TIP"];
+    long selectedDefault = [defaults integerForKey:@"DEFAULT_TIP"];
  
-    NSLog(@"got the default tip index as %i from user defaults", selectedDefault);
+    NSLog(@"got the default tip index as %ld from user defaults", selectedDefault);
     
     self.tipPercentage.selectedSegmentIndex = selectedDefault;
 
